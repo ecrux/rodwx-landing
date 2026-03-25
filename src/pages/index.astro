@@ -1,0 +1,357 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Rodwx — Tu asistente IA personal. En todas partes.</title>
+    <meta name="description" content="Gateway self-hosted que conecta WhatsApp, Telegram, Discord y mas con agentes de IA. Open source, multi-canal, agent-native." />
+    <meta name="keywords" content="Rodwx, IA, gateway, WhatsApp, Telegram, Discord, agente IA, self-hosted, open source" />
+    <meta property="og:title" content="Rodwx — Tu asistente IA personal. En todas partes." />
+    <meta property="og:description" content="Gateway self-hosted que conecta tus apps de chat con agentes de IA." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rodwx — Tu asistente IA personal. En todas partes." />
+    <meta name="twitter:description" content="Gateway self-hosted que conecta tus apps de chat con agentes de IA." />
+  </head>
+
+  <body class="grid-bg min-h-screen">
+
+    <!-- ==================== NAV ==================== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5" style="background:rgba(10,10,10,0.8);backdrop-filter:blur(12px);">
+      <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2 text-white font-semibold text-sm">
+          <span class="text-xl">🦞</span>
+          <span>Rodwx</span>
+        </a>
+        <div class="hidden sm:flex items-center gap-6 text-sm text-gray-400">
+          <a href="#canales" class="hover:text-white transition-colors">Canales</a>
+          <a href="#funciona" class="hover:text-white transition-colors">Como funciona</a>
+          <a href="#features" class="hover:text-white transition-colors">Funciones</a>
+          <a href="#setup" class="hover:text-white transition-colors">Instalar</a>
+        </div>
+        <a href="https://github.com/ecrux/rodwx" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="relative pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden">
+      <div class="hero-glow"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <!-- Lobster logo -->
+        <div class="relative inline-block mb-8 lobster-pulse">
+          <span class="text-7xl md:text-8xl glow-lobster inline-block">🦞</span>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+          Tu asistente IA personal.<br/>
+          <span class="text-gradient">En todas partes.</span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Gateway self-hosted que conecta WhatsApp, Telegram, Discord y mas con agentes de IA.
+          Un solo proceso, todos tus canales.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <a href="https://docs.rodwx.ai" target="_blank" rel="noopener" class="btn-primary">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            Empezar
+          </a>
+          <a href="https://github.com/ecrux/rodwx" target="_blank" rel="noopener" class="btn-secondary">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <!-- Terminal -->
+        <div class="terminal max-w-2xl mx-auto text-left">
+          <div class="terminal-bar">
+            <span class="terminal-dot" style="background:#ff5f57;"></span>
+            <span class="terminal-dot" style="background:#febc2e;"></span>
+            <span class="terminal-dot" style="background:#28c840;"></span>
+            <span class="ml-4 text-xs text-gray-500">terminal</span>
+          </div>
+          <div class="terminal-body text-gray-300">
+            <div class="typing-line"><span class="text-cyan">$</span> rodwx gateway --port 18789</div>
+            <div class="typing-line-2 text-gray-500">[info] Gateway iniciado en puerto 18789</div>
+            <div class="typing-line-3 text-gray-500">[info] Canales conectados: whatsapp, telegram, discord</div>
+            <div class="typing-line-4"><span class="text-green-400">[ok]</span> Listo. Esperando mensajes...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ==================== CHANNELS ==================== -->
+    <section id="canales" class="py-24 md:py-32">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="reveal text-3xl md:text-4xl font-bold text-white mb-4">Todos tus canales. Un solo gateway.</h2>
+        <p class="reveal reveal-delay-1 text-gray-400 mb-14 text-lg">Un mensaje desde cualquier app. Una respuesta inteligente.</p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {[
+            { name: "WhatsApp", icon: "💬", color: "#25D366" },
+            { name: "Telegram", icon: "✈️", color: "#0088cc" },
+            { name: "Discord", icon: "🎮", color: "#5865F2" },
+            { name: "iMessage", icon: "💬", color: "#34C759" },
+            { name: "Slack", icon: "💼", color: "#E01E5A" },
+            { name: "Signal", icon: "🔒", color: "#3A76F0" },
+            { name: "Mattermost", icon: "💭", color: "#0058CC" },
+            { name: "MS Teams", icon: "👥", color: "#6264A7" },
+          ].map((ch, i) => (
+            <div class={`reveal reveal-delay-${(i % 4) + 1} channel-card glass rounded-xl p-6 flex flex-col items-center gap-3`}>
+              <span class="text-3xl">{ch.icon}</span>
+              <span class="text-sm font-medium text-gray-200">{ch.name}</span>
+              <div class="w-6 h-0.5 rounded-full" style={`background:${ch.color};opacity:0.6;`}></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section id="funciona" class="py-24 md:py-32">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="reveal text-3xl md:text-4xl font-bold text-white text-center mb-4">Como funciona</h2>
+        <p class="reveal reveal-delay-1 text-gray-400 text-center mb-16 text-lg">Del mensaje al agente, en milisegundos.</p>
+
+        <!-- Flow diagram -->
+        <div class="reveal reveal-delay-2 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
+          <!-- Step 1 -->
+          <div class="glass rounded-xl px-6 py-5 text-center min-w-[140px]">
+            <div class="text-2xl mb-2">📱</div>
+            <div class="text-sm font-medium text-gray-200">Tu telefono</div>
+          </div>
+          <!-- Arrow -->
+          <div class="flow-arrow text-cyan text-2xl px-3 rotate-90 md:rotate-0">→</div>
+          <!-- Step 2 -->
+          <div class="glass rounded-xl px-6 py-5 text-center min-w-[140px]">
+            <div class="text-2xl mb-2">💬</div>
+            <div class="text-sm font-medium text-gray-200">App de chat</div>
+          </div>
+          <!-- Arrow -->
+          <div class="flow-arrow-2 text-cyan text-2xl px-3 rotate-90 md:rotate-0">→</div>
+          <!-- Step 3 - highlighted -->
+          <div class="glass rounded-xl px-6 py-5 text-center min-w-[160px] !border-lobster/30" style="background:rgba(230,57,70,0.06);">
+            <div class="text-2xl mb-2">🦞</div>
+            <div class="text-sm font-bold text-gradient">Rodwx Gateway</div>
+          </div>
+          <!-- Arrow -->
+          <div class="flow-arrow-3 text-cyan text-2xl px-3 rotate-90 md:rotate-0">→</div>
+          <!-- Step 4 -->
+          <div class="glass rounded-xl px-6 py-5 text-center min-w-[140px]">
+            <div class="text-2xl mb-2">🧠</div>
+            <div class="text-sm font-medium text-gray-200">Modelo IA</div>
+          </div>
+          <!-- Arrow -->
+          <div class="flow-arrow-4 text-cyan text-2xl px-3 rotate-90 md:rotate-0">→</div>
+          <!-- Step 5 -->
+          <div class="glass rounded-xl px-6 py-5 text-center min-w-[140px]">
+            <div class="text-2xl mb-2">✅</div>
+            <div class="text-sm font-medium text-gray-200">Respuesta</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ==================== FEATURES ==================== -->
+    <section id="features" class="py-24 md:py-32">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="reveal text-3xl md:text-4xl font-bold text-white text-center mb-4">Todo lo que necesitas</h2>
+        <p class="reveal reveal-delay-1 text-gray-400 text-center mb-14 text-lg">Funciones pensadas para desarrolladores y equipos.</p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            { icon: "🏠", title: "Self-hosted", desc: "Corre en tu hardware. Tus datos, tu control. Sin dependencia de terceros." },
+            { icon: "📡", title: "Multi-canal", desc: "WhatsApp, Telegram, Discord, Slack y mas. Un solo proceso los sirve todos." },
+            { icon: "🤖", title: "Agent-native", desc: "Herramientas, sesiones, memoria persistente y enrutamiento multi-agente incluidos." },
+            { icon: "📖", title: "Open Source", desc: "Licencia MIT. Inspecciona, modifica y contribuye. Sin letras chiquitas." },
+            { icon: "🧠", title: "Memoria persistente", desc: "Contexto que sobrevive entre conversaciones. Tu agente recuerda todo." },
+            { icon: "🔊", title: "TTS con ElevenLabs", desc: "Texto a voz con ElevenLabs, OpenAI y Microsoft. Respuestas de audio naturales." },
+            { icon: "🎙️", title: "Transcripcion de audio", desc: "Convierte notas de voz a texto automaticamente. Soporta multiples idiomas." },
+            { icon: "🔌", title: "Plugins extensibles", desc: "Sistema de plugins para extender funcionalidad sin tocar el core." },
+            { icon: "🛠️", title: "Browser, Sandbox, Cron", desc: "Automatizacion de navegador, sandbox de codigo y tareas programadas." },
+          ].map((f, i) => (
+            <div class={`reveal reveal-delay-${(i % 3) + 1} glass rounded-xl p-6`}>
+              <div class="text-2xl mb-3">{f.icon}</div>
+              <h3 class="text-white font-semibold mb-2">{f.title}</h3>
+              <p class="text-sm text-gray-400 leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ==================== QUICK SETUP ==================== -->
+    <section id="setup" class="py-24 md:py-32">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="reveal text-3xl md:text-4xl font-bold text-white text-center mb-4">Listo en 3 pasos</h2>
+        <p class="reveal reveal-delay-1 text-gray-400 text-center mb-14 text-lg">De cero a gateway en menos de un minuto.</p>
+
+        <div class="space-y-6">
+          <!-- Step 1 -->
+          <div class="reveal reveal-delay-1">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#E63946,#FF6B35);">1</span>
+              <span class="text-gray-200 font-medium">Instala Rodwx globalmente</span>
+            </div>
+            <div class="terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot" style="background:#ff5f57;"></span>
+                <span class="terminal-dot" style="background:#febc2e;"></span>
+                <span class="terminal-dot" style="background:#28c840;"></span>
+              </div>
+              <div class="terminal-body">
+                <span class="text-cyan">$</span> <span class="text-gray-200">npm install -g @ecrux/rodwx</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="reveal reveal-delay-2">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#E63946,#FF6B35);">2</span>
+              <span class="text-gray-200 font-medium">Configura tus canales y modelo IA</span>
+            </div>
+            <div class="terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot" style="background:#ff5f57;"></span>
+                <span class="terminal-dot" style="background:#febc2e;"></span>
+                <span class="terminal-dot" style="background:#28c840;"></span>
+              </div>
+              <div class="terminal-body">
+                <span class="text-cyan">$</span> <span class="text-gray-200">rodwx onboard</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="reveal reveal-delay-3">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#E63946,#FF6B35);">3</span>
+              <span class="text-gray-200 font-medium">Inicia el gateway y empieza a chatear</span>
+            </div>
+            <div class="terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot" style="background:#ff5f57;"></span>
+                <span class="terminal-dot" style="background:#febc2e;"></span>
+                <span class="terminal-dot" style="background:#28c840;"></span>
+              </div>
+              <div class="terminal-body">
+                <span class="text-cyan">$</span> <span class="text-gray-200">rodwx gateway --port 18789</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ==================== COMPARISON ==================== -->
+    <section class="py-24 md:py-32">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="reveal text-3xl md:text-4xl font-bold text-white text-center mb-4">Rodwx vs alternativas</h2>
+        <p class="reveal reveal-delay-1 text-gray-400 text-center mb-14 text-lg">Por que Rodwx es diferente.</p>
+
+        <div class="reveal reveal-delay-2 overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="text-left py-4 px-4 text-gray-500 font-medium"></th>
+                <th class="py-4 px-4 text-center">
+                  <span class="text-gradient font-bold">🦞 Rodwx</span>
+                </th>
+                <th class="py-4 px-4 text-center text-gray-400 font-medium">ChatGPT App</th>
+                <th class="py-4 px-4 text-center text-gray-400 font-medium">Bots tradicionales</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-300">
+              <tr class="border-b border-white/5">
+                <td class="py-3 px-4 text-gray-400">Self-hosted</td>
+                <td class="py-3 px-4 text-center check-yes text-lg">✓</td>
+                <td class="py-3 px-4 text-center check-no text-lg">✗</td>
+                <td class="py-3 px-4 text-center check-partial text-lg">~</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-3 px-4 text-gray-400">Multi-canal</td>
+                <td class="py-3 px-4 text-center check-yes text-lg">✓</td>
+                <td class="py-3 px-4 text-center check-no text-lg">✗</td>
+                <td class="py-3 px-4 text-center check-no text-lg">✗</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-3 px-4 text-gray-400">Memoria persistente</td>
+                <td class="py-3 px-4 text-center check-yes text-lg">✓</td>
+                <td class="py-3 px-4 text-center check-partial text-lg">~</td>
+                <td class="py-3 px-4 text-center check-no text-lg">✗</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-3 px-4 text-gray-400">Herramientas / Tool use</td>
+                <td class="py-3 px-4 text-center check-yes text-lg">✓</td>
+                <td class="py-3 px-4 text-center check-partial text-lg">~</td>
+                <td class="py-3 px-4 text-center check-no text-lg">✗</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-3 px-4 text-gray-400">Open Source</td>
+                <td class="py-3 px-4 text-center check-yes text-lg">✓</td>
+                <td class="py-3 px-4 text-center check-no text-lg">✗</td>
+                <td class="py-3 px-4 text-center check-partial text-lg">~</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-400">Plugins extensibles</td>
+                <td class="py-3 px-4 text-center check-yes text-lg">✓</td>
+                <td class="py-3 px-4 text-center check-no text-lg">✗</td>
+                <td class="py-3 px-4 text-center check-partial text-lg">~</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="py-16">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <div class="flex items-center justify-center gap-8 mb-8">
+          <a href="https://github.com/ecrux/rodwx" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors text-sm">GitHub</a>
+          <a href="https://docs.rodwx.ai" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors text-sm">Docs</a>
+          <a href="https://discord.gg/rodwx" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors text-sm">Discord</a>
+        </div>
+        <p class="text-gray-600 text-sm">Hecho con 🦞 por la comunidad Rodwx</p>
+      </div>
+    </footer>
+
+    <!-- ==================== SCROLL REVEAL SCRIPT ==================== -->
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
