@@ -34,6 +34,7 @@ import "../styles/global.css";
           <a href="#canales" class="hover:text-white transition-colors">Canales</a>
           <a href="#funciona" class="hover:text-white transition-colors">Como funciona</a>
           <a href="#features" class="hover:text-white transition-colors">Funciones</a>
+          <a href="#seguridad" class="hover:text-white transition-colors">Seguridad</a>
           <a href="#setup" class="hover:text-white transition-colors">Instalar</a>
         </div>
         <a href="https://github.com/ecrux/rodwx" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
@@ -257,6 +258,70 @@ import "../styles/global.css";
               <div class="terminal-body">
                 <span class="text-cyan">$</span> <span class="text-gray-200">rodwx gateway --port 18789</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ==================== NEMOCLAW SECURITY ==================== -->
+    <section id="seguridad" class="py-24 md:py-32">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <div class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-green-500/20 bg-green-500/5 text-green-400 text-xs font-medium mb-6">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            Powered by NVIDIA NemoClaw
+          </div>
+          <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-white mb-4">Seguridad de nivel empresarial</h2>
+          <p class="reveal reveal-delay-2 text-gray-400 text-lg max-w-2xl mx-auto">
+            Rodwx integra el esquema de seguridad de <a href="https://github.com/NVIDIA/NemoClaw" target="_blank" rel="noopener" class="text-cyan hover:underline">NVIDIA NemoClaw</a> para ejecutar agentes en sandboxes aislados con proteccion multicapa.
+          </p>
+        </div>
+
+        <!-- Security layers -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+          {[
+            { icon: "🌐", title: "Red", desc: "Aislamiento de red con namespaces. Bloqueo de conexiones no autorizadas. Hot-reloadable.", tag: "Network" },
+            { icon: "📁", title: "Filesystem", desc: "Acceso restringido via Landlock. Solo /sandbox y /tmp. Bloqueado al crear.", tag: "Landlock" },
+            { icon: "⚙️", title: "Procesos", desc: "Filtros seccomp que bloquean syscalls peligrosos. Sin escalada de privilegios.", tag: "seccomp" },
+            { icon: "🧠", title: "Inferencia", desc: "Todas las llamadas a modelos pasan por el gateway controlado. Keys protegidas.", tag: "Gateway" },
+          ].map((layer, i) => (
+            <div class={`reveal reveal-delay-${i + 1} glass rounded-xl p-6`}>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-2xl">{layer.icon}</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-green-500/10 text-green-400 border border-green-500/20">{layer.tag}</span>
+              </div>
+              <h3 class="text-white font-semibold mb-2">{layer.title}</h3>
+              <p class="text-sm text-gray-400 leading-relaxed">{layer.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Architecture diagram -->
+        <div class="reveal reveal-delay-2 glass rounded-xl p-8 max-w-3xl mx-auto">
+          <h3 class="text-white font-semibold text-center mb-6">Arquitectura de seguridad</h3>
+          <div class="flex flex-col gap-3 font-mono text-xs sm:text-sm">
+            <div class="flex items-center gap-3">
+              <span class="w-24 text-right text-gray-500">Usuario</span>
+              <span class="text-cyan">→</span>
+              <div class="flex-1 px-4 py-2 rounded border border-white/10 bg-white/[0.02] text-gray-300">WhatsApp / Discord / Telegram</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-24 text-right text-gray-500">Gateway</span>
+              <span class="text-cyan">→</span>
+              <div class="flex-1 px-4 py-2 rounded border border-blue-500/20 bg-blue-500/5 text-gradient font-semibold">Rodwx Gateway (autenticado)</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-24 text-right text-gray-500">Sandbox</span>
+              <span class="text-cyan">→</span>
+              <div class="flex-1 px-4 py-2 rounded border border-green-500/20 bg-green-500/5 text-green-400">NemoClaw Sandbox (Landlock + seccomp + netns)</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-24 text-right text-gray-500">Modelo</span>
+              <span class="text-cyan">→</span>
+              <div class="flex-1 px-4 py-2 rounded border border-white/10 bg-white/[0.02] text-gray-300">OpenAI / Anthropic / NVIDIA Nemotron / Ollama</div>
             </div>
           </div>
         </div>
