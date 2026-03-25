@@ -5,18 +5,20 @@ import "../styles/global.css";
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/isotipo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>Rodwx — Tu asistente IA personal. En todas partes.</title>
     <meta name="description" content="Gateway self-hosted que conecta WhatsApp, Telegram, Discord y mas con agentes de IA. Open source, multi-canal, agent-native." />
-    <meta name="keywords" content="Rodwx, IA, gateway, WhatsApp, Telegram, Discord, agente IA, self-hosted, open source" />
+    <meta name="keywords" content="Rodwx, IA, gateway, WhatsApp, Telegram, Discord, agente IA, self-hosted, open source, panda" />
     <meta property="og:title" content="Rodwx — Tu asistente IA personal. En todas partes." />
     <meta property="og:description" content="Gateway self-hosted que conecta tus apps de chat con agentes de IA." />
+    <meta property="og:image" content="/logo.png" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Rodwx — Tu asistente IA personal. En todas partes." />
     <meta name="twitter:description" content="Gateway self-hosted que conecta tus apps de chat con agentes de IA." />
+    <meta name="twitter:image" content="/logo.png" />
   </head>
 
   <body class="grid-bg min-h-screen">
@@ -25,7 +27,7 @@ import "../styles/global.css";
     <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5" style="background:rgba(10,10,10,0.8);backdrop-filter:blur(12px);">
       <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
         <a href="#" class="flex items-center gap-2 text-white font-semibold text-sm">
-          <span class="text-xl">🦞</span>
+          <img src="/isotipo.png" alt="Rodwx" class="w-7 h-7" />
           <span>Rodwx</span>
         </a>
         <div class="hidden sm:flex items-center gap-6 text-sm text-gray-400">
@@ -45,9 +47,9 @@ import "../styles/global.css";
       <div class="hero-glow"></div>
 
       <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <!-- Lobster logo -->
-        <div class="relative inline-block mb-8 lobster-pulse">
-          <span class="text-7xl md:text-8xl glow-lobster inline-block">🦞</span>
+        <!-- Panda logo -->
+        <div class="relative inline-block mb-8 logo-pulse">
+          <img src="/logo_negativo.png" alt="Rodwx Panda" class="w-28 h-28 md:w-36 md:h-36 glow-primary inline-block" />
         </div>
 
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
@@ -143,8 +145,8 @@ import "../styles/global.css";
           <!-- Arrow -->
           <div class="flow-arrow-2 text-cyan text-2xl px-3 rotate-90 md:rotate-0">→</div>
           <!-- Step 3 - highlighted -->
-          <div class="glass rounded-xl px-6 py-5 text-center min-w-[160px] !border-lobster/30" style="background:rgba(230,57,70,0.06);">
-            <div class="text-2xl mb-2">🦞</div>
+          <div class="glass rounded-xl px-6 py-5 text-center min-w-[160px]" style="border-color:rgba(0,102,255,0.3);background:rgba(0,102,255,0.06);">
+            <img src="/isotipo.png" alt="Rodwx" class="w-8 h-8 mx-auto mb-2" />
             <div class="text-sm font-bold text-gradient">Rodwx Gateway</div>
           </div>
           <!-- Arrow -->
@@ -207,7 +209,7 @@ import "../styles/global.css";
           <!-- Step 1 -->
           <div class="reveal reveal-delay-1">
             <div class="flex items-center gap-3 mb-3">
-              <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#E63946,#FF6B35);">1</span>
+              <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#0066FF,#4F46E5);">1</span>
               <span class="text-gray-200 font-medium">Instala Rodwx globalmente</span>
             </div>
             <div class="terminal">
@@ -225,7 +227,7 @@ import "../styles/global.css";
           <!-- Step 2 -->
           <div class="reveal reveal-delay-2">
             <div class="flex items-center gap-3 mb-3">
-              <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#E63946,#FF6B35);">2</span>
+              <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#0066FF,#4F46E5);">2</span>
               <span class="text-gray-200 font-medium">Configura tus canales y modelo IA</span>
             </div>
             <div class="terminal">
@@ -243,7 +245,7 @@ import "../styles/global.css";
           <!-- Step 3 -->
           <div class="reveal reveal-delay-3">
             <div class="flex items-center gap-3 mb-3">
-              <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#E63946,#FF6B35);">3</span>
+              <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#0066FF,#4F46E5);">3</span>
               <span class="text-gray-200 font-medium">Inicia el gateway y empieza a chatear</span>
             </div>
             <div class="terminal">
@@ -275,7 +277,10 @@ import "../styles/global.css";
               <tr class="border-b border-white/10">
                 <th class="text-left py-4 px-4 text-gray-500 font-medium"></th>
                 <th class="py-4 px-4 text-center">
-                  <span class="text-gradient font-bold">🦞 Rodwx</span>
+                  <div class="flex items-center justify-center gap-2">
+                    <img src="/isotipo.png" alt="Rodwx" class="w-5 h-5" />
+                    <span class="text-gradient font-bold">Rodwx</span>
+                  </div>
                 </th>
                 <th class="py-4 px-4 text-center text-gray-400 font-medium">ChatGPT App</th>
                 <th class="py-4 px-4 text-center text-gray-400 font-medium">Bots tradicionales</th>
@@ -329,12 +334,13 @@ import "../styles/global.css";
     <!-- ==================== FOOTER ==================== -->
     <footer class="py-16">
       <div class="max-w-5xl mx-auto px-6 text-center">
+        <img src="/logo_negativo.png" alt="Rodwx" class="w-12 h-12 mx-auto mb-6 opacity-40" />
         <div class="flex items-center justify-center gap-8 mb-8">
           <a href="https://github.com/ecrux/rodwx" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors text-sm">GitHub</a>
           <a href="https://docs.rodwx.ai" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors text-sm">Docs</a>
           <a href="https://discord.gg/rodwx" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors text-sm">Discord</a>
         </div>
-        <p class="text-gray-600 text-sm">Hecho con 🦞 por la comunidad Rodwx</p>
+        <p class="text-gray-600 text-sm">Hecho con 🐼 por la comunidad Rodwx</p>
       </div>
     </footer>
 

@@ -8,9 +8,9 @@
 @theme {
   --color-bg: #0a0a0a;
   --color-bg-card: rgba(255, 255, 255, 0.03);
-  --color-lobster: #E63946;
-  --color-lobster-dark: #b82d38;
-  --color-orange: #FF6B35;
+  --color-primary: #0066FF;
+  --color-primary-dark: #0052cc;
+  --color-indigo: #4F46E5;
   --color-cyan: #00D4FF;
   --color-cyan-dim: rgba(0, 212, 255, 0.15);
   --color-white: #ffffff;
@@ -44,7 +44,7 @@ body {
 }
 
 ::selection {
-  background: rgba(230, 57, 70, 0.35);
+  background: rgba(0, 102, 255, 0.35);
   color: #fff;
 }
 
@@ -75,8 +75,8 @@ body {
 
 /* ---------- glow ---------- */
 
-.glow-lobster {
-  filter: drop-shadow(0 0 24px rgba(230, 57, 70, 0.5)) drop-shadow(0 0 64px rgba(230, 57, 70, 0.25));
+.glow-primary {
+  filter: drop-shadow(0 0 24px rgba(0, 102, 255, 0.5)) drop-shadow(0 0 64px rgba(79, 70, 229, 0.25));
 }
 
 .glow-cyan {
@@ -86,7 +86,7 @@ body {
 /* ---------- gradient text ---------- */
 
 .text-gradient {
-  background: linear-gradient(135deg, #E63946, #FF6B35);
+  background: linear-gradient(135deg, #0066FF, #4F46E5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -109,7 +109,7 @@ body {
   border-radius: 0.5rem;
   font-weight: 600;
   font-size: 0.9375rem;
-  background: linear-gradient(135deg, #E63946, #FF6B35);
+  background: linear-gradient(135deg, #0066FF, #4F46E5);
   color: #fff;
   transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
@@ -118,7 +118,7 @@ body {
 .btn-primary:hover {
   opacity: 0.9;
   transform: translateY(-1px);
-  box-shadow: 0 4px 24px rgba(230, 57, 70, 0.35);
+  box-shadow: 0 4px 24px rgba(0, 102, 255, 0.35);
 }
 
 .btn-secondary {
@@ -183,13 +183,13 @@ body {
 
 @keyframes blink-caret {
   0%, 100% { border-color: transparent; }
-  50% { border-color: #E63946; }
+  50% { border-color: #0066FF; }
 }
 
 .typing-line {
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid #E63946;
+  border-right: 2px solid #0066FF;
   width: 0;
   animation: typing 2s steps(40, end) 0.5s forwards, blink-caret 0.75s step-end infinite;
 }
@@ -215,7 +215,7 @@ body {
   white-space: nowrap;
   width: 0;
   opacity: 0;
-  border-right: 2px solid #E63946;
+  border-right: 2px solid #0066FF;
   animation: fadeIn 0.01s 6.5s forwards, typing 1s steps(20, end) 6.5s forwards, blink-caret 0.75s step-end 7.5s infinite;
 }
 
@@ -297,7 +297,7 @@ body {
   transform: translateX(-50%);
   width: 800px;
   height: 600px;
-  background: radial-gradient(ellipse, rgba(230, 57, 70, 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(0, 102, 255, 0.08) 0%, rgba(79, 70, 229, 0.04) 40%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -309,18 +309,18 @@ body {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
 }
 
-/* ---------- pulse ring on lobster ---------- */
+/* ---------- pulse ring on logo ---------- */
 
 @keyframes pulseRing {
   0% { transform: scale(1); opacity: 0.6; }
   100% { transform: scale(1.8); opacity: 0; }
 }
 
-.lobster-pulse::after {
+.logo-pulse::after {
   content: "";
   position: absolute;
   inset: -8px;
   border-radius: 50%;
-  border: 2px solid rgba(230, 57, 70, 0.4);
+  border: 2px solid rgba(0, 102, 255, 0.4);
   animation: pulseRing 2.5s ease-out infinite;
 }
